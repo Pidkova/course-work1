@@ -46,7 +46,7 @@ button {
   background-color: #777b6500;
   border: 1px solid white;
 }
-.button:active:hover:not([disabled]) {
+.button:hover {
   color: #1335a6;
   border: 1px solid #13339c;
   background-color: #eeeee0;
