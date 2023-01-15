@@ -46,11 +46,12 @@ button {
   background-color: #777b6500;
   border: 1px solid white;
 }
-.button:hover {
+button:hover {
   color: #1335a6;
   border: 1px solid #13339c;
   background-color: #eeeee0;
   transition: 100ms ease-in-out;
+  cursor: pointer;
 }
 
 input.inputSubmit {
@@ -141,9 +142,12 @@ button.recents {
 }
 i {
   padding: 3px;
-  margin-left: 5px;
   border: 1px solid #13339c;
   border-radius: 5px;
+}
+
+button > div {
+  margin: 5px 0px;
 }
 th {
   color: #1c3587;
@@ -160,12 +164,21 @@ tr td {
   background-color: rgba(255, 255, 255, 0.523);
   color: #1c3587;
 }
+
+input:hover,
+select:hover {
+  cursor: pointer;
+  border: 1px solid #13339c;
+}
 @media (min-width: 26rem) {
   .check {
     display: inline-block;
     padding: 1rem;
   }
-
+  button > div {
+    display: inline;
+    margin: 0 5px;
+  }
   .container {
     padding: 3rem 2rem;
   }
@@ -209,7 +222,7 @@ tr td {
   width: max-content;
   padding: 10px 50px;
   border-radius: 12px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
   color: #13339c;
-  margin: 0 auto;
+  margin: 20px auto;
 }
