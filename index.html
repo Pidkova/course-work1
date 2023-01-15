@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;400;500;700&family=Quicksand:wght@300&family=Unbounded:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/07dad2791b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Find out the time distance!</h1>
+      <div class="finalDateForm">
+        <form id="dateForm">
+          <input
+            type="date"
+            name="startDate"
+            id="startDate"
+            placeholder="dd-mm-yyyy"
+            class="date required"
+            max=""
+          />
+
+          <br />
+          <div class="check">
+            <input
+              type="checkbox"
+              id="oneWeekFromDate"
+              name="oneWeekFromDate"
+              value="one week from this date"
+            />
+            <label for="oneWeekFromDate">one week from date</label>
+          </div>
+          <div class="check">
+            <input
+              type="checkbox"
+              id="oneMonthFromDate"
+              name="oneMonthFromDate"
+              value="one month from this date"
+            />
+            <label for="oneMonthFromDate">one month from date</label>
+          </div>
+          <br />
+          <input
+            type="date"
+            name="endDate"
+            id="endDate"
+            min=""
+            placeholder="dd-mm-yyyy"
+            class="date required"
+          />
+
+          <select id="selectOption" class="required">
+            <option value="allDays" id="allDays" value="default">
+              All days
+            </option>
+            <option value="weekends" id="weekends" value="weekends">
+              Weekends
+            </option>
+            <option value="workingDays" id="workingDays" value="workingDays">
+              Working days
+            </option>
+          </select>
+        </form>
+        <h2>count in:</h2>
+        <div class="buttonSection flex" id="buttonSection">
+          <button type="submit" class="resultBtn">DAYS</button>
+          <button type="submit" class="resultBtn">HOURS</button>
+          <button type="submit" class="resultBtn">MINUTES</button>
+          <button type="submit" class="resultBtn">SEKONDS</button>
+        </div>
+        <h3 id="result">First choose the dates!</h3>
+      </div>
+      <button id="recents" class="recents">
+        Show recent searches <i class="fa-solid fa-angle-down"></i>
+      </button>
+      <div id="table" class="hidden tablearea"></div>
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
